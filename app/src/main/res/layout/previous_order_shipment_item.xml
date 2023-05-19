@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/totalTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="end"
+                android:text="850 SAR"
+                android:textColor="#1D368D"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="@+id/statusOrderCard"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/itemTotalNumberCard"
+                app:layout_constraintTop_toTopOf="@+id/itemTotalNumberCard" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/itemTotalNumberCard"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:padding="5dp"
+                app:cardBackgroundColor="#F2F2F8"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/productImage"
+                app:layout_constraintStart_toEndOf="@+id/productImage"
+                app:layout_constraintTop_toTopOf="@+id/productImage">
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+                    android:text="+40"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/statusOrderCard"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="#EBF9EF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/correct_done_icon" />
+
+                    <TextView
+                        android:id="@+id/statusOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:gravity="center"
+                        android:text="Delivered"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/shipmentNumberTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Shupment 1"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/shipmentDateTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Request at : Sat  12 oct,10:30 Pm"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shipmentNumberTv"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_border"
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shipmentDateTv"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemTotalNumberCard"
+                app:layout_constraintVertical_bias="0.0">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/clear"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Rate"
+                    android:textAllCaps="true"
+                    android:textColor="#1D368D"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/baseline_star_rate_24"
+                    app:iconGravity="textStart"
+                    app:iconTint="#1D368D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="#C3C3C3" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/clear2"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Re-order"
+                    android:textAllCaps="true"
+                    android:textColor="#1D368D"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/baseline_autorenew_24"
+                    app:iconGravity="textStart"
+                    app:iconTint="#1D368D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="#C3C3C3" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
